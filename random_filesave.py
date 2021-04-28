@@ -13,11 +13,11 @@ if os.path.isfile("1학년 "+ ban + "반 발표순서.txt"): # 반 파일이 있
 else:
     f = open("1학년 "+ ban + "반 발표순서.txt", "w", encoding="utf8")
 ######
-end = int(input("가장 끝 번호는 몇번 ? : "))
-num = int(input("몇명을 뽑을까? : ")) 
-sunseo = random.sample(range(1,end+1),num) # 1부터 end까지의 범위중에 num개를 중복없이 뽑겠다.
-print(sunseo)
-result = "1학년"+ ban + "반 : " + str(sunseo)
-f.write(result)
-f.write("\n")
-f.close()
+    end = int(input("가장 끝 번호는 몇번 ? : "))
+    num = int(input("몇명을 뽑을까? : ")) 
+    sunseo = random.sample(range(1,end+1),num) # 1부터 end까지의 범위중에 num개를 중복없이 뽑겠다.
+    print(sunseo)
+    result = "1학년"+ ban + "반 : " + str(sunseo)
+    f.write(result)
+    f.write("\n")
+    f.close()
